@@ -109,36 +109,21 @@
 <!-- header area end here -->
 <main>
 <!-- hero area start here -->
-<section class="slider-area fix">
-    <div class="slider-active swiper-container">
-        <div class="swiper-wrapper">
-            <div class="single-slider slider-height slider-height-2 d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
-                <div class="slide-bg" data-background="https://images.pexels.com/photos/6147276/pexels-photo-6147276.jpeg"></div>
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="aslider aslider-2 z-index">
-                                <span class="slider-top-text slider-top-text2" data-animation="fadeInUp" data-delay=".5s"></span>
-                                <h2 class="aslider--title aslider--title-2 mb-20" data-animation="fadeInUp" data-delay=".7s" style="color: #ffffff;">Your Path to <br>Educational Success </h2>
-                                <p class="aslider--subtitle aslider--subtitle-2 mb-40" data-animation="fadeInUp" data-delay=".9s" style="color: #fff;">Achieve your educational goals with our expert guidance.<br>We help you make informed decisions, from course selection to admissions, for a successful future.</p>
-                                <div class="banner-content" data-animation="fadeInUp" data-delay=".9s">
-                                    <form class="form" name="store" id="store" method="post" action="form.php">
-                                        <div class="form-inner">
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        
+<section class="landing-section">
+    <div class="text-content">
+      <h1>Your Path to <br> Educational Success</h1>
+      <p>
+        Achieve your educational goals with our expert guidance. <br>
+        We help you make informed decisions, from course selection to admissions, for a successful future.
+      </p>
     </div>
-</section>
+    <div class="image-content">
+      <div class="image-container">
+        <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/10/image1-50.jpg" alt="Educational Success">
+        <div class="particles"></div>
+      </div>
+    </div>
+  </section>
 <!-- hero area end here -->
 
 
@@ -730,6 +715,17 @@
 </footer>
 <!-- footer area end -->
 
+
+<script>
+    const particles = document.querySelector('.particles');
+
+    document.addEventListener('mousemove', (event) => {
+      const x = event.clientX / window.innerWidth * 100;
+      const y = event.clientY / window.innerHeight * 100;
+
+      particles.style.transform = `translate(-${x / 10}%, -${y / 10}%)`;
+    });
+  </script>
     <!-- JS here -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
