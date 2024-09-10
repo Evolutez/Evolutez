@@ -7697,3 +7697,96 @@ input.main-search-input:-ms-input-placeholder {
       font-size: 20px;
   }
 }
+.landing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  height: 70vh;
+  position: relative; /* Added for background image positioning */
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Background image with low opacity using ::before */
+.landing-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://media.istockphoto.com/id/1218737747/vector/learning-online-e-learning-video-call-chat-with-class-distance-education.jpg?s=612x612&w=0&k=20&c=fFFwc3CTP4XtvmruZLiK8EzAbzvAxJL_kw5BsA7z7w8=') no-repeat center center/cover; /* Change 'background-image.jpg' to your image */
+  opacity: 0.1; /* Low opacity */
+  z-index: -1; /* Ensures it stays behind the content */
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 100px; /* Increased to move the text more to the right */
+}
+
+.text-content h1 {
+  font-size: 48px;
+  color: #333;
+}
+
+.text-content p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #555;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 1500px;
+  max-height: 900px; /* Increased the height */
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url('particles.png') repeat;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .landing-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    padding: 0;
+  }
+
+  .text-content h1 {
+    font-size: 32px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .image-content {
+    margin-top: 30px;
+  }
+}
